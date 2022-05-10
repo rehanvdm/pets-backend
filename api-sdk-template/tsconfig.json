@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs",
+        "lib": [
+            "ES2015",
+            "ESNext.AsyncIterable",
+            "DOM"
+        ],
+        "outDir": "dist",
+        "strict": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "forceConsistentCasingInFileNames": true,
+        "sourceMap": true,
+        "declaration": true,
+        "skipLibCheck": true
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+}

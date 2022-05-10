@@ -1,0 +1,52 @@
+openapi: 3.0.1
+info:
+  title: 'Pets API'
+  version: 0.0.1
+paths:
+  '/pets':
+    get:
+      operationId: GetPets # Optional better type name then PetsList
+      description: Get all pets
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Pet"
+
+  '/pets/{id}':
+    get:
+      operationId: GetPetById # Optional better type name then PetsDetail
+      description: Get a pet by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Pet"
+
+components:
+  schemas:
+    Pet:
+      type: object
+      properties:
+        id:
+          type: number
+        type:
+          type: string
+        name:
+          type: string
+      required:
+        - id
+        - type
+        - name
