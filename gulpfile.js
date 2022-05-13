@@ -310,7 +310,6 @@ async function generateApiSdk()
 }
 async function generateAndPushApiSdk()
 {
-  console.log(process.env.GITHUB_PAT)
   fs.rmSync(paths.apiSdk+"/.git", {force: true, recursive: true});
   if(!fs.existsSync(paths.apiSdk))
     fs.mkdirSync(paths.apiSdk,{ recursive: true });
@@ -443,7 +442,7 @@ gulp.task('cdk_deploy', async () =>
     await execCommand("tsc", "", paths.workingDir);
     await cdkCommand("deploy");
 
-    await generateAndPushApiSdk(config);
+    await generateAndPushApiSdk();
   }
   catch (e) {
     console.error(e);
