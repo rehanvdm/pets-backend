@@ -24,8 +24,8 @@ You can also run the scripts via`npm run <TASK>`  for your convenience.
 - `<YOUR AWS PROFILE NAME TO USE FOR DEPLOYMENTS>`
 - `<AWS REGION TO DEPLOY IN>`
 - `<AWS ACCOUNT ID TO DEPLOY IN>`
-- `<HTTPS URL OF THE EXISTING EMPTY GITHUB REPO TO STORE THE API SDK ENDING IN .git>` example https://github.com/rehanvdm/pets-api.git
-- `<SDK PACKAGE NAME AS IN THE package.json>` must start with @, example @rehanvdm/pets-api
+- `<GIT URL OF THE EXISTING EMPTY GITHUB REPO TO STORE THE API SDK ENDING IN .git>` example git@github.com:rehanvdm/pets-api.git
+- `<SDK PACKAGE NAME AS IN THE package.json>` must start with @ and have format @user/repo, example @rehanvdm/pets-api
 - `<SDK PACKAGE REPO AS IN THE package.json>` example git://github.com/rehanvdm/pets-api.git
 
 ## Running locally
